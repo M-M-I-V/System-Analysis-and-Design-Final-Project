@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS mcst_elibrary;
-USE mcst_elibrary;
+CREATE DATABASE mcst_elibrary_laptop_borrowing_system;
+USE mcst_elibrary_laptop_borrowing_system;
 
 -- Student Table
 CREATE TABLE Student (
