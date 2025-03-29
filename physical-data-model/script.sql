@@ -1,4 +1,14 @@
+-- Final Project: MCST E-Library Laptop Borrowing System
+-- Group 2 Members:
+-- 1. Lacandazo, Neil Jay
+-- 2. Pille, Jasmin
+-- 3. Daclis, Celso
+-- 4. Florida, Rea Lynne
+-- 5. Agua, Michael
+
+-- Create the database
 CREATE DATABASE mcst_elibrary_laptop_borrowing_system;
+-- Use the database
 USE mcst_elibrary_laptop_borrowing_system;
 
 -- Student Table
@@ -8,6 +18,7 @@ CREATE TABLE Student (
     Program VARCHAR(50) NOT NULL
 );
 
+-- Insert sample data into Student table
 INSERT INTO Student (Library_ID, Name, Program) VALUES
 ('S001', 'John Doe', 'Computer Science'),
 ('S002', 'Jane Smith', 'Information Technology'),
@@ -71,6 +82,7 @@ CREATE TABLE Laptop (
     CHECK (Status IN ('Available', 'Borrowed', 'Under Maintenance'))
 );
 
+-- Insert sample data into Laptop table
 INSERT INTO Laptop (Serial_Number, Brand, Model, IP_Address, Status) VALUES
 ('SN1001', 'Dell', 'Latitude 5420', '192.168.1.2', 'Available'),
 ('SN1002', 'HP', 'EliteBook 840 G7', '192.168.1.3', 'Borrowed'),
@@ -130,6 +142,7 @@ CREATE TABLE Staff (
     Position ENUM('Librarian', 'Assistant', 'Technician') NOT NULL
 );
 
+-- Insert sample data into Staff table
 INSERT INTO Staff (Name, Position) VALUES
 ('John Doe', 'Librarian'),
 ('Jane Smith', 'Assistant'),
@@ -198,6 +211,7 @@ CREATE TABLE Loan (
     CHECK (Status IN ('Borrowed', 'Returned', 'Overdue'))
 );
 
+-- Insert sample data into Loan table
 INSERT INTO Loan (Library_ID, Laptop_ID, Staff_ID, Borrow_Date, Due_Date, Return_Date, Status) VALUES
 ('LIB001', 1, 3, '2024-03-01 09:00:00', '2024-03-08 17:00:00', '2024-03-07 15:30:00', 'Returned'),
 ('LIB002', 2, 5, '2024-03-02 10:30:00', '2024-03-09 17:00:00', '2024-03-10 12:00:00', 'Overdue'),
@@ -264,6 +278,7 @@ CREATE TABLE Laptop_Maintenance (
     CHECK (Status IN ('Pending', 'Completed'))
 );
 
+-- Insert sample data into Laptop Maintenance table
 INSERT INTO Laptop_Maintenance (Laptop_ID, Staff_ID, Maintenance_Type, Maintenance_Date, Status, Maintenance_Notes) VALUES
 (1, 5, 'Software Update', '2024-03-01 10:00:00', 'Completed', 'Updated antivirus and OS patches.'),
 (2, 7, 'Hardware Repair', '2024-03-02 14:30:00', 'Completed', 'Replaced faulty keyboard.'),
