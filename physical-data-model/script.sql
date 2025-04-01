@@ -1,4 +1,6 @@
 -- Final Project: MCST E-Library Laptop Borrowing System
+-- Physical Data Model
+
 -- Group 2 Members:
 -- 1. Lacandazo, Neil Jay
 -- 2. Pille, Jasmin
