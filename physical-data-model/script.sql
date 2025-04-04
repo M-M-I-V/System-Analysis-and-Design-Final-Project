@@ -16,7 +16,7 @@ USE mcst_elibrary_laptop_borrowing_system;
 -- Program Table
 CREATE TABLE Program (
     Program_ID INT PRIMARY KEY AUTO_INCREMENT,
-    Name VARCHAR(100)
+    Name VARCHAR(250)
 );
 
 -- Insert sample data into Program table
@@ -451,5 +451,5 @@ INSERT INTO Laptop_Maintenance (Laptop_ID, Technician_ID, Maintenance_Type, Main
 (46, 6, 'Hardware Repair', '2024-05-13 14:15:00', 'Completed', 'Replaced damaged keyboard keys.'),
 (47, 9, 'Software Update', '2024-05-15 09:25:00', 'Completed', 'Updated system firewall settings.'),
 (48, 8, 'Hardware Repair', '2024-05-17 13:50:00', 'Pending', 'Pending assessment for hardware failure.'),
-(49, 5, 'Software Update', '2024-05-19 10:40:00', 'Completed', 'Installed new battery optimization software.'),
+(49, 5, 'Software Update', '2024-05-19 10:40:00', 'Completed', 'Installed new battery optimization software'),
 (50, NULL, 'Hardware Repair', '2024-05-20 15:55:00', 'Completed', 'Replaced broken power button.');
